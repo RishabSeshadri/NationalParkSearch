@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "json-simple-1.1.1.jar",
+        "c:\\Users\\risha\\Downloads\\groupdocs-search-22.11.jar"
+    ]
+}
