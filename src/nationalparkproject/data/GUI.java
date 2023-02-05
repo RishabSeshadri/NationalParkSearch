@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -37,16 +38,16 @@ public class GUI implements ActionListener {
         answer = new JTextArea(5, 50);
         constraints = new GridBagConstraints();
         frame = new JFrame("Park Questions");
-        question = new JLabel("In detail please put in the type of park you would " 
-        + "want to go to and the activities you would like to do");
+        question = new JLabel("Hello! Please tell me a little about activities you like to do and " +
+         "what kind of parks you would like to see :)");
         panel = new JPanel();
 	    imageHolder1=new JLabel(topImage);
         imageHolder2=new JLabel(bottomImage);
-	    button=new JButton("submit");
+	    button = new JButton("submit");
         button.addActionListener(this);
     } // GUI
     public void init() {
-        frame.setSize(1000,600);
+        frame.setPreferredSize(new Dimension(1535, 993));
         panel.setLayout(new GridBagLayout());
         panel.setBorder(BorderFactory.createEmptyBorder());
 		constraints.gridx = 0;

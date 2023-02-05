@@ -5,24 +5,18 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.util.ArrayList;
 public class Panel extends JPanel {
-    JTextArea keywords; 
+    JTextPane keywords; 
     JLabel imgHolder;
-    JTextArea description;
-    JTextArea activities;
+    JTextPane description;
+    JTextPane activities;
     JLabel name;
     Border border = BorderFactory.createLineBorder(Color.BLACK, 2);
     public Panel(ArrayList<String> aList) {
-        /* 
-        int ctr = 0;
-        for(String str : aList){
-            System.out.println("ctr: " + (++ctr) + ", str: " + str);
-        }
-        */
         name = new JLabel("label", SwingConstants.CENTER);
         imgHolder = new JLabel(new ImageIcon("src/nationalparkproject/data/topImage1.jpg"));
-        description = new JTextArea(5, 15);
-        keywords = new JTextArea(3, 18);
-        activities = new JTextArea(5,18);
+        description = new JTextPane();
+        keywords = new JTextPane();
+        activities = new JTextPane();
         this.setLayout(new BorderLayout());
         String str = aList.get(1);
         name.setText(str);
@@ -30,10 +24,13 @@ public class Panel extends JPanel {
         keywords.setBorder(border);
         imgHolder.setBorder(border);
         keywords.setText(aList.get(2));
-        name.setPreferredSize(new Dimension(100,50));
-        imgHolder.setPreferredSize(new Dimension(100, 50));
-        description.setText(aList.get(3));
+        name.setPreferredSize(new Dimension(150,50));
+        imgHolder.setPreferredSize(new Dimension(150, 50));
+        description.setText(aList.get(3) + "\n\n" + aList.get(4));
         activities.setText(aList.get(4));
+        description.setEditable(false);
+        keywords.setEditable(false);
+        activities.setEditable(false);
         this.add(name, BorderLayout.NORTH);
         this.add(description, BorderLayout.WEST);
         this.add(keywords, BorderLayout.SOUTH);
