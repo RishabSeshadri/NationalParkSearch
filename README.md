@@ -15,4 +15,4 @@ parks and rank them based on their odds of aligning with user likeness. The sear
 then returns information about those parks.
 
 ------------------------------------------------------------------------------------------
-Project designed by Kevin Howard and Rishab Seshadri
+UGAHacks 8 project designed by Kevin Howard and Rishab Seshadri
